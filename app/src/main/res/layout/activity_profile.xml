@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.didaagency.adopteunelivraison.view.fragments.accounts.ProfileViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/toolBarColor"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_10ssp"
+                android:paddingTop="@dimen/_30ssp"
+                android:paddingRight="@dimen/_10ssp"
+                android:paddingBottom="@dimen/_10ssp">
+
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    style="@style/boldHeading"
+                    android:text="@string/text_forgot_heading" />
+
+                <TextView
+                    style="@style/subHeading"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:text="@string/text_account_setting" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_20sdp"
+                android:elevation="@dimen/_10ssp"
+                android:background="@drawable/db_rounded_bottom_sheet_white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:onClick="@{() -> model.onManageProfileClick()}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/profileIconDesign"
+                        android:src="@drawable/ic_profile"
+                        app:tint="@color/appColor" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10ssp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/profileLabelDesign"
+                            android:text="@string/text_manage_profile" />
+
+                        <ImageView
+                            style="@style/etIconDesign"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_arrow_right" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:onClick="@{() -> model.onChangePasswordClick()}"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/profileIconDesign"
+                        android:src="@drawable/ic_padlock"
+                        app:tint="@color/appColor" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10ssp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/profileLabelDesign"
+                            android:text="@string/text_change_password" />
+
+                        <ImageView
+                            style="@style/etIconDesign"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_arrow_right" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:onClick="@{() -> model.onPushNotificationClick()}"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/profileIconDesign"
+                        android:src="@drawable/ic_notification_bell"
+                        app:tint="@color/appColor" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10ssp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/profileLabelDesign"
+                            android:layout_centerVertical="true"
+                            android:text="@string/text_push_notification" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/swPushNotification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:checked="true"
+                            android:padding="@dimen/_5ssp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:onClick="@{() -> model.onLocalNotificationClick()}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/profileIconDesign"
+                        android:src="@drawable/ic_notification_bell"
+                        app:tint="@color/appColor" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10ssp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/profileLabelDesign"
+                            android:layout_centerVertical="true"
+                            android:text="@string/text_local_notification" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/swLocalNotification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:checked="true"
+                            android:padding="@dimen/_5ssp" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:onClick="@{() -> model.onPrinterClick()}"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/profileIconDesign"
+                        android:src="@drawable/ic_printer"
+                        app:tint="@color/appColor" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10ssp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/profileLabelDesign"
+                            android:text="@string/text_printer" />
+
+                        <ImageView
+                            style="@style/etIconDesign"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_arrow_right" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:onClick="@{() -> model.onLanguageClick()}"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/profileIconDesign"
+                        android:src="@drawable/ic_language"
+                        app:tint="@color/appColor" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10ssp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/profileLabelDesign"
+                            android:text="@string/text_language" />
+
+                        <ImageView
+                            style="@style/etIconDesign"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_arrow_right" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:onClick="@{() -> model.onDeleteClick()}"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/profileIconDesign"
+                        android:src="@drawable/ic_delete_account"
+                        app:tint="@color/appColor" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10ssp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/profileLabelDesign"
+                            android:text="@string/text_delete_account" />
+
+                        <ImageView
+                            style="@style/etIconDesign"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_arrow_right" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:onClick="@{() -> model.onLegalClick()}"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        style="@style/profileIconDesign"
+                        android:src="@drawable/ic_legal"
+                        app:tint="@color/appColor" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10ssp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/profileLabelDesign"
+                            android:text="@string/text_legal" />
+
+                        <ImageView
+                            style="@style/etIconDesign"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/ic_arrow_right" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:onClick="@{() -> model.onSignOutClick()}"
+                    android:text="@string/text_sign_out"
+                    style="@style/buttonDesignOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"  />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

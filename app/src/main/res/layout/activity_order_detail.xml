@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.didaagency.adopteunelivraison.view.fragments.orders.OrdersViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlToolbar"
+            style="@style/toolbarDesign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:onClick="@{() -> model.onBackClick()}"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                style="@style/labelToolbarTitleDesign"
+                android:text="@string/text_order_detail"
+                />
+        </RelativeLayout>
+
+        <ScrollView android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/bg_fragments"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+                <LinearLayout
+                    android:id="@+id/llOrderDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10ssp"
+                    android:layout_marginRight="@dimen/_10ssp"
+                    android:layout_marginTop="@dimen/_10ssp"
+                    android:layout_marginBottom="@dimen/_5ssp"
+                    android:orientation="vertical">
+                    <TextView
+                        style="@style/orderHeadingDesign"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/text_order_id" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        >
+
+                        <TextView
+                            android:id="@+id/tvOrderId"
+                            style="@style/orderLabelDesign"
+                            android:layout_alignParentLeft="true"
+                            android:text="123123" />
+
+                        <TextView
+                            android:id="@+id/tvDeliveryStatus"
+                            style="@style/tvRoundOrderStatus"
+                            android:layout_alignParentRight="true"
+                            android:text="Devliery" />
+                    </RelativeLayout>
+                    <TextView
+                        style="@style/orderDescriptionDesign"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="@string/text_payment_by_cash_on_delivery" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tvOrderDeliveryStatus"
+                            style="@style/orderDescriptionDesign"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toLeftOf="@+id/tvOrderStatus"
+                            android:text="Placed o Tue, Feb 14, 2023 2:30 pm" />
+
+                        <TextView
+                            android:id="@+id/tvOrderStatus"
+                            style="@style/tvRoundOrderStatus"
+                            android:layout_alignParentRight="true"
+                            android:backgroundTint="@color/light_green"
+                            android:text="New" />
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/orderDescriptionDesign"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="@string/text_time_line" />
+
+                    <RelativeLayout
+                        android:onClick="@{() -> model.onOrderTimeLineClick()}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            style="@style/orderDescriptionDesign"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/text_confirming_order" />
+
+                        <ImageView
+                            style="@style/imageForwardDesign"
+                            android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        style="@style/dividerLeftDrawable"
+
+                        />
+
+                    <RelativeLayout
+                        android:onClick="@{() -> model.onDeliveryInfoClick()}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            style="@style/orderHeadingDesign"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/text_delivery_info" />
+
+                        <ImageView
+                            android:id="@+id/ivDeliveryInfo"
+                            style="@style/imageForwardDesign"
+                            android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/llDeliveryInformation"
+                    android:layout_above="@+id/llSubmission"
+                    android:layout_below="@+id/llOrderDetail"
+                    android:layout_marginStart="@dimen/_10ssp"
+                    android:layout_marginLeft="@dimen/_10ssp"
+                    android:layout_marginEnd="@dimen/_10ssp"
+                    android:layout_marginRight="@dimen/_10ssp"
+                    android:layout_marginBottom="@dimen/_3ssp"
+                    android:background="@drawable/bg_home_earning_rounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/llOrderSummary"
+                        android:layout_marginStart="@dimen/_10ssp"
+                        android:layout_marginLeft="@dimen/_10ssp"
+                        android:layout_marginEnd="@dimen/_10ssp"
+                        android:layout_marginRight="@dimen/_10ssp"
+                        android:layout_marginBottom="@dimen/_3ssp"
+                        android:orientation="vertical">
+
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp">
+
+                            <TextView
+                                style="@style/orderLabelDesign"
+                                android:layout_alignParentLeft="true"
+                                android:text="@string/text_order_detail" />
+
+                            <TextView
+                                android:id="@+id/tvOrderDetail"
+                                style="@style/orderLabelDesign"
+                                android:layout_alignParentRight="true"
+                                android:text="" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/orderLabelDesign"
+                                android:layout_alignParentLeft="true"
+                                android:text="@string/text_date_time" />
+
+                            <TextView
+                                android:id="@+id/tvOrderDateTime"
+                                style="@style/orderLabelDesign"
+                                android:layout_alignParentRight="true"
+                                android:text="" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvOrderItems"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+
+                            <TextView
+                                android:id="@+id/tv_no_items_found"
+                                style="@style/subHeading"
+                                android:textSize="@dimen/_11ssp"
+                                android:layout_centerInParent="true"
+                                android:text="@string/text_no_item_found" />
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llOrderSummary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_10ssp"
+                        android:layout_marginLeft="@dimen/_10ssp"
+                        android:layout_marginEnd="@dimen/_10ssp"
+                        android:layout_marginRight="@dimen/_10ssp"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/orderHeadingDesign"
+                                android:layout_alignParentLeft="true"
+                                android:text="@string/text_summary" />
+
+                            <TextView
+                                android:id="@+id/tvItemCount"
+                                style="@style/orderLabelDesign"
+                                android:layout_alignParentRight="true"
+                                android:text="3 Items" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp">
+
+                            <TextView
+                                style="@style/orderLabelDesign"
+                                android:layout_alignParentLeft="true"
+                                android:text="@string/text_sub_total" />
+
+                            <TextView
+                                android:id="@+id/tvSubTotal"
+                                style="@style/orderLabelDesign"
+                                android:layout_alignParentRight="true"
+                                android:text="$234" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5sdp">
+
+                            <TextView
+                                style="@style/orderLabelDesign"
+                                android:layout_alignParentLeft="true"
+                                android:text="@string/text_service_fee" />
+
+                            <TextView
+                                android:id="@+id/tvServiceFee"
+                                style="@style/orderLabelDesign"
+                                android:layout_alignParentRight="true"
+                                android:text="$34" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5sdp">
+
+                            <TextView
+                                style="@style/orderLabelDesign"
+                                android:layout_alignParentLeft="true"
+                                android:text="@string/text_total" />
+
+                            <TextView
+                                android:id="@+id/tvTotal"
+                                style="@style/orderLabelDesign"
+                                android:layout_alignParentRight="true"
+                                android:text="$434" />
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llSubmission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        style="@style/buttonDesignOutline"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:onClick="@{() -> model.onRejectedClick()}"
+                        android:text="@string/text_rejected" />
+
+
+                    <TextView
+                        style="@style/buttonDesign"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:onClick="@{() -> model.onAcceptedClick()}"
+                        android:text="@string/text_accepted" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

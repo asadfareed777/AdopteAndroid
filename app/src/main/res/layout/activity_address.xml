@@ -1,0 +1,142 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.didaagency.adopteunelivraison.view.fragments.merchant.MerchantViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlToolbar"
+            style="@style/toolbarDesign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:onClick="@{() -> model.onBackClick()}"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                style="@style/labelToolbarTitleDesign"
+                android:text="@string/text_address"
+                />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <RelativeLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:onClick="@{() -> model.onMapLocationClick()}"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/ivAddress"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_address" />
+
+                        <EditText
+                            android:id="@+id/etAddress"
+                            style="@style/editTextDesign"
+                            android:hint="@string/hint_select" />
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/ivAddress"
+                        android:layout_alignParentRight="true"
+                        style="@style/etIconDesign"
+
+                        android:src="@drawable/ic_directions" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    style="@style/labelToolbarTitleDesign"
+                    android:layout_marginTop="@dimen/_10ssp"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="@string/text_radius_distance_covered" />
+
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_distance_covered" />
+
+                        <EditText
+                            android:id="@+id/etDistanceCovered"
+                            style="@style/editTextDesign"
+                            android:inputType="number"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_distance_unit" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spDistanceUnit"
+                            android:entries="@array/select"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/buttonDesign"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> model.onSubmitClick()}"
+                    android:text="@string/text_submit" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

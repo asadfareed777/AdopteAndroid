@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/darkgreen_color"
+        android:indeterminateTintMode="src_in"
+        android:minWidth="@dimen/_70sdp"
+        android:minHeight="@dimen/_70sdp" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center"
+        android:text="Please Wait..."
+        android:textColor="@color/darkgreen_color"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold" />
+</LinearLayout>

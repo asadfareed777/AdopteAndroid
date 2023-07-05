@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_1ssp"
+        android:background="@drawable/bg_solid"
+        android:backgroundTint="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/tvOrderId"
+                    style="@style/orderLabelDesign"
+                    android:layout_alignParentLeft="true"
+                    android:text="Order # 123" />
+
+                <TextView
+                    android:id="@+id/tvDeliveryStatus"
+                    style="@style/tvRoundOrderStatus"
+                    android:layout_alignParentRight="true"
+                    android:text="Devliery" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                >
+
+                <TextView
+                    android:id="@+id/tvOrderDescription"
+                    style="@style/orderDescriptionDesign"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/tvOrderStatus"
+                    android:text="1 Item for lili" />
+
+                <TextView
+                    android:id="@+id/tvOrderStatus"
+                    style="@style/tvRoundOrderStatus"
+                    android:layout_alignParentRight="true"
+                    android:backgroundTint="@color/light_green"
+                    android:text="New" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    style="@style/orderDescriptionDesign"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/tvPaymentStatus"
+                    android:text="Yesterday" />
+
+                <TextView
+                    android:id="@+id/tvPaymentStatus"
+                    style="@style/tvRoundOrderStatus"
+                    android:layout_alignParentRight="true"
+                    android:text="Paid" />
+            </RelativeLayout>
+
+        </LinearLayout>
+<!--        <View-->
+<!--            android:layout_marginTop="@dimen/_5sdp"-->
+<!--            style="@style/dividerLeftDrawable"-->
+
+<!--            />-->
+    </LinearLayout>
+
+
+</layout>

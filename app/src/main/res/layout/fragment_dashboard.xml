@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.didaagency.adopteunelivraison.view.fragments.home_fragment.HomeViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_fragments"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_home_earning_rounded"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_7sdp">
+
+                <TextView
+                    style="@style/boldHeading"
+                    android:text="@string/text_earnings" />
+
+                <TextView
+                    style="@style/subHeading"
+                    android:text="@string/text_earnings_sub_heading"
+                    android:textSize="@dimen/_11ssp" />
+
+
+                <TextView
+                    android:id="@+id/tvEarnings"
+                    style="@style/boldHeading"
+                    android:textColor="@color/appColor"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEarnings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp" />
+
+            <TextView
+                style="@style/boldHeading"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:text="@string/text_last_order" />
+
+            <TextView
+                style="@style/subHeading"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:text="@string/text_last_order_sub_heading" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvLastOrders"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_5sdp" />
+
+                <TextView
+                    android:id="@+id/tvNoRecordFoundLastOrder"
+                    style="@style/subHeading"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/text_no_data_found"
+                    android:textSize="@dimen/_11ssp"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTotalOrders"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp" />
+
+
+            <TextView
+                style="@style/boldHeading"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:text="@string/text_top_customer" />
+
+            <TextView
+                style="@style/subHeading"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:text="@string/text_top_customer_detail" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTopCustomer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_5sdp" />
+
+                <TextView
+                    android:id="@+id/tvNoRecordFoundTopCustomer"
+                    style="@style/subHeading"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/text_no_data_found"
+                    android:textSize="@dimen/_11ssp"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/boldHeading"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:text="@string/text_sales_overview" />
+
+            <RelativeLayout
+                android:background="@drawable/bg_solid"
+                android:backgroundTint="@color/white"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+                    android:layout_margin="@dimen/_10sdp"  />
+            </RelativeLayout>
+
+
+            <TextView
+                style="@style/boldHeading"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:text="@string/text_overview_of_review" />
+
+            <TextView
+                style="@style/subHeading"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:text="@string/text_overview_of_review_message" />
+            <RelativeLayout
+                android:background="@drawable/bg_solid"
+                android:backgroundTint="@color/white"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/horizontalBarChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"   />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>
+
+
+

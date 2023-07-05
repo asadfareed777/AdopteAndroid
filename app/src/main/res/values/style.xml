@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="toolbarDesign">
+        <item name="android:padding">@dimen/_5sdp</item>
+        <item name="android:background">@drawable/db_toolbar_bg</item>
+        <item name="android:elevation" tools:ignore="DuplicateDefinition" tools:targetApi="lollipop">
+            @dimen/_5sdp
+        </item>
+    </style>
+
+    <style name="labelDesign">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/label_color</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    <style name="labelToolbarTitleDesign">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="orderHeadingDesign">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="etLabelDesign">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/label_color</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:layout_marginBottom">@dimen/_2ssp</item>
+    </style>
+    <style name="storeHourLabelDesign">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:layout_marginBottom">@dimen/_2ssp</item>
+    </style>
+    <style name="imageForwardDesign">
+        <item name="android:layout_width">@dimen/_20sdp</item>
+        <item name="android:layout_height">@dimen/_20sdp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:src">@drawable/ic_arrow_right</item>
+        <item name="android:padding">@dimen/_4ssp</item>
+
+    </style>
+
+    <style name="profileLabelDesign">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/label_color</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:layout_marginBottom">@dimen/_2ssp</item>
+    </style>
+
+    <style name="etIconDesign">
+        <item name="android:layout_width">@dimen/_20sdp</item>
+        <item name="android:layout_height">@dimen/_20sdp</item>
+        <item name="android:padding">@dimen/_1ssp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="profileIconDesign">
+        <item name="android:layout_width">@dimen/_25sdp</item>
+        <item name="android:layout_height">@dimen/_25sdp</item>
+        <item name="android:padding">@dimen/_5ssp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_circle</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="boldHeading">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/_1ssp</item>
+        <item name="android:paddingBottom">@dimen/_1ssp</item>
+        <item name="android:paddingLeft">@dimen/_1ssp</item>
+        <item name="android:paddingRight">@dimen/_1ssp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="loginBoldHeading">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/_1ssp</item>
+        <item name="android:paddingBottom">@dimen/_1ssp</item>
+        <item name="android:paddingLeft">@dimen/_1ssp</item>
+        <item name="android:paddingRight">@dimen/_1ssp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="subHeading">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sub_heading_color</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="noDataFoundHeading">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/sub_heading_color</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="switchDesign">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layoutDirection">rtl</item>
+        <item name="android:gravity">center</item>
+        <item name="android:checked">true</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="switchPadding">@dimen/_10ssp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="editTextDesign">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <!--        <item name="android:paddingTop">@dimen/_1ssp</item>-->
+        <item name="android:paddingBottom">@dimen/_1ssp</item>
+        <!--        <item name="android:paddingLeft">@dimen/_2ssp</item>-->
+        <item name="android:paddingRight">@dimen/_2ssp</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/hintColor</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+        <item name="android:maxLength">40</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="editTextViewDesignNew">
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/grey_dropdown</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/_10ssp</item>
+        <item name="android:paddingRight">@dimen/_10ssp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLength">140</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="buttonDesign">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/db_btn</item>
+        <item name="android:layout_marginTop">@dimen/_20ssp</item>
+        <item name="android:layout_marginBottom">@dimen/_10ssp</item>
+        <!--        <item name="android:paddingTop">@dimen/_15ssp</item>-->
+        <!--        <item name="android:paddingBottom">@dimen/_15ssp</item>-->
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="buttonDesignOutline">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/db_btn_secondary</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="textViewsLeftDrawable">
+        <item name="android:paddingLeft">@dimen/_5sdp</item>
+        <item name="android:paddingRight">@dimen/_5sdp</item>
+        <item name="android:paddingTop">@dimen/_10sdp</item>
+        <item name="android:paddingBottom">@dimen/_10sdp</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:textColor">@color/label_color</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="dividerLeftDrawable">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1sp</item>
+        <item name="android:background">@color/stroke_edit_field</item>
+    </style>
+
+    <style name="inputLayoutDesignOutlinedBoxExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/appColor</item>
+        <item name="boxStrokeWidthFocused">2px</item>
+        <item name="boxStrokeWidth">2px</item>
+        <item name="expandedHintEnabled">false</item>
+        <item name="hintTextColor">@color/light_grey</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxStrokeColor">@color/colorAccent</item>
+        <item name="hintTextAppearance">?attr/textAppearanceCaption</item>
+        <item name="fontFamily">Medium</item>
+        <item name="endIconDrawable">@drawable/ic_arrow_down</item>
+    </style>
+
+    <style name="inputLayoutDesignOutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_marginTop">@dimen/_10ssp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textColor">@color/appColor</item>
+        <item name="boxStrokeWidthFocused">2px</item>
+        <item name="boxStrokeWidth">2px</item>
+        <item name="expandedHintEnabled">false</item>
+        <item name="hintTextColor">@color/light_grey</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxStrokeColor">@color/colorAccent</item>
+        <item name="hintTextAppearance">?attr/textAppearanceCaption</item>
+        <item name="fontFamily">Medium</item>
+
+    </style>
+
+    <style name="inputLayoutDesignBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <!--        <item name="boxBackgroundMode">outline</item> -->
+        <item name="expandedHintEnabled">false</item>
+        <item name="android:textColorHint">@color/hintColor</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxStrokeWidth">2dp</item>
+        <item name="boxStrokeColor">@color/white</item>
+        <!--        <item name="hintTextAppearance">@style/TextHintLabel</item>-->
+
+    </style>
+
+
+    <style name="editTextOutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:textColor">@color/appColor</item>
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="android:paddingTop">@dimen/_10ssp</item>
+        <item name="android:paddingBottom">@dimen/_5ssp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+
+    <style name="editTextBackgroundDesign">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/_5ssp</item>
+        <item name="android:paddingBottom">@dimen/_8ssp</item>
+        <item name="android:paddingLeft">@dimen/_10ssp</item>
+        <item name="android:paddingRight">@dimen/_10ssp</item>
+        <item name="android:background">@drawable/db_bg_edit_field</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="tvRoundOrderStatus">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/_1ssp</item>
+        <item name="android:paddingBottom">@dimen/_2ssp</item>
+        <item name="android:paddingLeft">@dimen/_10ssp</item>
+        <item name="android:paddingRight">@dimen/_10ssp</item>
+        <item name="android:background">@drawable/bg_solid_rounded</item>
+        <item name="android:backgroundTint">@color/bg_order_grey</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_8ssp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+
+    <style name="orderLabelDesign">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <style name="orderDescriptionDesign">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/grey_dropdown</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+</resources>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.didaagency.adopteunelivraison.view.login.LoginViewModel" />
+    </data>
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_20ssp">
+
+
+                    <TextView
+                        style="@style/loginBoldHeading"
+                        android:layout_gravity="center"
+                        android:text="@string/text_sign_you_in" />
+
+                    <TextView
+                        style="@style/subHeading"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/text_sign_in_message" />
+
+                    <LinearLayout
+                        style="@style/editTextBackgroundDesign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            style="@style/etIconDesign"
+                            android:src="@drawable/ic_username" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10ssp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/etLabelDesign"
+                                android:text="@string/text_username" />
+
+                            <EditText
+                                android:id="@+id/etUsername"
+                                style="@style/editTextDesign"
+                                android:hint="@string/hint_general" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        style="@style/editTextBackgroundDesign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/ivPassLftDraw"
+                            style="@style/etIconDesign"
+                            android:layout_alignParentLeft="true"
+                            android:src="@drawable/ic_padlock" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10ssp"
+                            android:layout_toLeftOf="@+id/ivEye"
+                            android:layout_toRightOf="@+id/ivPassLftDraw"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/etLabelDesign"
+                                android:text="@string/text_password" />
+
+                            <EditText
+                                android:id="@+id/etPassword"
+                                style="@style/editTextDesign"
+                                android:hint="@string/hint_password"
+                                android:inputType="textPassword" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/ivEye"
+                            style="@style/etIconDesign"
+                            android:layout_alignParentRight="true"
+                            android:onClick="@{() -> model.onEyePasswordClick()}"
+                            android:src="@drawable/ic_eye_hide" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:onClick="@{() -> model.onForgetPasswordClick()}"
+                        android:text="@string/text_forget_password"
+                        android:textColor="@color/btn_bg_Color"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        style="@style/buttonDesign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{() -> model.onLoginClick()}"
+                        android:text="@string/text_signin" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llDontHaveAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:onClick="@{() -> model.onSignUpClick()}"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_don_t_have_an_account_signup"
+                        android:textColor="@color/label_color"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/_7sdp"
+                        android:text="@string/text_signup"
+                        android:textColor="@color/btn_bg_Color"
+                        android:textSize="@dimen/_12ssp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</layout>

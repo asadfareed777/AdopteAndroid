@@ -1,0 +1,404 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.didaagency.adopteunelivraison.view.fragments.merchant.MerchantViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlToolbar"
+            style="@style/toolbarDesign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:onClick="@{() -> model.onBackClick()}"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                style="@style/labelToolbarTitleDesign"
+                android:text="@string/text_information"
+                />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_margin="@dimen/_15sdp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivInfo"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_shaded_circle"
+                        android:layout_margin="@dimen/_3sdp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvInfoDescription"
+                            style="@style/etLabelDesign"
+                            android:maxLines="4"
+                            android:gravity="left"
+                            android:text="@string/text_dummy" />
+
+
+                        <TextView
+                            style="@style/subHeading"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/text_change_logo"
+                            android:onClick="@{() -> model.onChangeLogoClick()}"
+                            android:textColor="@color/appColor"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/swPublishedMerchant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layoutDirection="rtl"
+                    android:padding="@dimen/_5ssp"
+                    android:text="@string/text_published_merchant"
+                    android:textSize="@dimen/_12ssp"
+                    app:switchPadding="@dimen/_10sdp" />
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_restaurant_name" />
+
+                        <EditText
+                            android:id="@+id/etRestaurantName"
+                            style="@style/editTextDesign"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_restaurant_slug" />
+
+                        <EditText
+                            android:id="@+id/etRestaurantSlug"
+                            style="@style/editTextDesign"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_contact_name" />
+
+                        <EditText
+                            android:id="@+id/etContactName"
+                            style="@style/editTextDesign"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_contact_email" />
+
+                        <EditText
+                            android:id="@+id/etContactEmail"
+                            style="@style/editTextDesign"
+                            android:inputType="textEmailAddress"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_contact_phone" />
+
+                        <com.didaagency.adopteunelivraison.utils.widgets.CustomPhoneNumber
+                            android:id="@+id/etPhoneNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_about" />
+
+                        <EditText
+                            android:id="@+id/etAbout"
+                            style="@style/editTextDesign"
+                            android:lines="4"
+                            android:inputType="textMultiLine"
+                            android:gravity="start"
+                            android:maxLength="1000"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_short_about" />
+
+                        <EditText
+                            android:id="@+id/etShortAbout"
+                            style="@style/editTextDesign"
+                            android:lines="4"
+                            android:inputType="textMultiLine"
+                            android:gravity="start"
+                            android:maxLength="400"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_cousine" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spCousine"
+                            android:entries="@array/select"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_services" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spServices"
+                            android:entries="@array/select"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_tags" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spTags"
+                            android:entries="@array/select"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_featured" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spFeatured"
+                            android:entries="@array/select"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_distance_covered" />
+
+                        <EditText
+                            android:id="@+id/etDistanceCovered"
+                            style="@style/editTextDesign"
+                            android:inputType="number"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_distance_unit" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spDistanceUnit"
+                            android:entries="@array/select"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/buttonDesign"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> model.onSubmitClick()}"
+                    android:text="@string/text_submit" />
+
+
+            </LinearLayout>
+        </ScrollView>
+     </LinearLayout>
+</layout>

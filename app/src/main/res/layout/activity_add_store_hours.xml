@@ -1,0 +1,164 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.didaagency.adopteunelivraison.view.fragments.merchant.MerchantViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlToolbar"
+            style="@style/toolbarDesign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:onClick="@{() -> model.onBackClick()}"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                style="@style/labelToolbarTitleDesign"
+                android:text="@string/text_add_store_hour"
+                />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_margin="@dimen/_15sdp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/swOpenOrClose"
+                    style="@style/switchDesign"
+                    android:text="@string/text_open_or_close"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvStoreHours"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_no_record_found"
+                        style="@style/noDataFoundHeading"
+                        android:text="@string/text_no_data_found" />
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:onClick="@{() -> model.onFromClick()}"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/ivAddress"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_from" />
+
+                        <TextView
+                            android:id="@+id/etFrom"
+                            style="@style/editTextDesign"
+                            android:hint="@string/hint_select" />
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/ivAddress"
+                        android:layout_alignParentRight="true"
+                        style="@style/etIconDesign"
+                        android:src="@drawable/ic_time"
+                        app:tint="@color/appColor" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:onClick="@{() -> model.onToClick()}"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/ivTo"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_to" />
+
+                        <TextView
+                            android:id="@+id/etTo"
+                            style="@style/editTextDesign"
+                            android:hint="@string/hint_select" />
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/ivTo"
+                        android:layout_alignParentRight="true"
+                        style="@style/etIconDesign"
+                        android:src="@drawable/ic_time"
+                        app:tint="@color/appColor" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_custom_message" />
+
+                        <EditText
+                            android:id="@+id/etMessage"
+                            style="@style/editTextDesign"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btnAdd"
+                    style="@style/buttonDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:onClick="@{() -> model.onAddClick()}"
+                    android:text="@string/text_add" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

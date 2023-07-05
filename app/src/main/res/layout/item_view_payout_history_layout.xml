@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llParent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:backgroundTint="@color/white"
+        android:elevation="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5ssp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvTransactionStatus"
+                    style="@style/orderLabelDesign"
+                    android:layout_alignParentLeft="true"
+                    android:text="Paid" />
+
+                <TextView
+                    android:id="@+id/tvTransactionPrice"
+                    style="@style/orderDescriptionDesign"
+                    android:textSize="@dimen/_11ssp"
+                    android:layout_alignParentRight="true"
+                    android:text="$232.2" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvTransactionDescription"
+                style="@style/orderDescriptionDesign"
+                android:layout_alignParentLeft="true"
+                android:text="Payment to order # 123" />
+
+
+            <TextView
+                android:id="@+id/tvTransactionDate"
+                style="@style/orderDescriptionDesign"
+                android:layout_alignParentLeft="true"
+                android:text="12 June 2022 5:00 pm" />
+
+
+
+            <View
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/dividerLeftDrawable"
+
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</layout>

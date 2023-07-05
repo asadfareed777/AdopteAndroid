@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activities"
+        android:layout_margin="@dimen/_2sdp"
+        android:padding="@dimen/_3ssp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11ssp" />
+
+</layout>

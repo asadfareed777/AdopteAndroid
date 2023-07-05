@@ -1,0 +1,35 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="heading_text_size">32sp</dimen>
+    <dimen name="sub_heading_text_size">24sp</dimen>
+    <dimen name="label_heading">18sp</dimen>
+    <dimen name="fields_hint_text_size">12sp</dimen>
+    <dimen name="counts_text_size">32sp</dimen>
+    <dimen name="fields_padding">15dp</dimen>
+    <dimen name="image_view_padding">10dp</dimen>
+    <dimen name="margin_xminimum">2dp</dimen>
+    <dimen name="margin_minimum">5dp</dimen>
+    <dimen name="margin_average">10dp</dimen>
+    <dimen name="margin_maximum">15dp</dimen>
+    <dimen name="margin_xxmax">30dp</dimen>
+
+    <dimen name="ripple_radius">40sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="spinner_width">200dp</dimen>
+    <dimen name="drawable_ring_size">4dip</dimen>
+    <dimen name="text_xsmall">10sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_medium">14sp</dimen>
+    <dimen name="text_xmedium">16sp</dimen>
+    <dimen name="text_large">18sp</dimen>
+    <dimen name="text_xlarge">22sp</dimen>
+    <dimen name="text_xxlarge">26sp</dimen>
+    <dimen name="text_xxxlarge">32sp</dimen>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.didaagency.adopteunelivraison.view.dashboard.MainViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:id="@+id/rlToolbar"
+            style="@style/toolbarDesign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="@{() -> model.onSearchClick()}"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_search" />
+
+            <ImageView
+                android:id="@+id/ivNotification"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_centerVertical="true"
+                android:onClick="@{() -> model.onNotificationClick()}"
+                android:padding="@dimen/_8sdp"
+                android:layout_toLeftOf="@+id/ivSearch"
+                android:src="@drawable/ic_notification_bell"
+                app:tint="@color/black" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/swOnlineStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layoutDirection="rtl"
+                android:padding="@dimen/_5ssp"
+                android:text="@string/text_online_status"
+                android:textSize="@dimen/_12ssp"
+                app:switchPadding="@dimen/_10sdp" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_below="@+id/rlToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_above="@+id/bottom_navigation"
+            />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            app:elevation="@dimen/_5ssp"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_navigation" />
+
+    </RelativeLayout>
+</layout>

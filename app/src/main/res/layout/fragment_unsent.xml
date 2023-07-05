@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_grey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/str_unsent"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingBottom="@dimen/_15sdp"
+            android:visibility="visible"
+            tools:itemCount="15"
+            tools:listitem="@layout/item_unsent" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_no_record_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="@dimen/_12ssp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:backgroundTint="#2f80eb"
+        android:fontFamily="sans-serif-medium"
+        android:minWidth="120dp"
+        android:minHeight="45dp"
+        android:text="@string/text_submit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp" />
+</FrameLayout>

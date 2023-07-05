@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.didaagency.adopteunelivraison.view.fragments.merchant.MerchantViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:background="@color/bg_fragments"
+        android:fitsSystemWindows="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_7ssp"
+                android:background="@drawable/bg_home_earning_rounded"
+                android:backgroundTint="@color/appColorLightBg"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/subHeading"
+                        android:text="@string/text_earnings"
+                        android:textSize="@dimen/_11ssp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        style="@style/subHeading"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/text_request_payout"
+                        android:onClick="@{() -> model.onRequestPayoutClick()}"
+                        android:textColor="@color/appColor"
+                        android:textSize="@dimen/_10ssp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/subHeading"
+                    android:textSize="@dimen/_10ssp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_dark_grey"
+                    android:text="@string/text_earnings_sub_heading" />
+
+
+                <TextView
+                    android:id="@+id/tvEarnings"
+                    style="@style/boldHeading"
+                    android:textColor="@color/appColor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/boldHeading"
+                    android:textSize="@dimen/_10ssp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:text="100" />
+
+                <TextView
+                    style="@style/subHeading"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/black"
+                    android:text="Food Orders" />
+
+
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"
+                    />
+                <TextView
+                    style="@style/boldHeading"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:text="$43k" />
+
+                <TextView
+                    style="@style/subHeading"
+                    android:textSize="@dimen/_10ssp"
+                    android:text="Payments" />
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMerchantMenus"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTabs"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMerchantHistory"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/tvNoRecordFound"
+                    style="@style/subHeading"
+                    android:textSize="@dimen/_11ssp"
+                    android:layout_centerInParent="true"
+                    android:text="@string/text_no_data_found" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

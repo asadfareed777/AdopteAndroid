@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/db_rounded_bottom_sheet_white"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp">
+
+    <View
+        style="@style/dividerLeftDrawable"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_5sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/_5sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10ssp"
+        android:layout_marginRight="@dimen/_10ssp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/orderHeadingDesign"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/_5ssp"
+                android:text="@string/text_request_payout" />
+
+
+            <ImageView
+                android:id="@+id/ivClose"
+                style="@style/imageForwardDesign"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_square_stoke"
+                android:src="@drawable/ic_baseline_close_24"
+                app:tint="@color/bg_dialog" />
+        </RelativeLayout>
+
+        <TextView
+            style="@style/orderLabelDesign"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:text="@string/text_payment_account"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvAccountType"
+                style="@style/orderLabelDesign"
+                android:layout_alignParentLeft="true"
+                android:text="@string/text_paypal" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                style="@style/orderLabelDesign"
+                android:layout_alignParentRight="true"
+                android:text="@string/hint_email" />
+        </RelativeLayout>
+
+        <LinearLayout
+            style="@style/editTextBackgroundDesign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/etLabelDesign"
+                    android:text="@string/text_amount" />
+
+                <EditText
+                    android:id="@+id/etAmount"
+                    style="@style/editTextDesign"
+                    android:hint="@string/hint_general"
+                    android:inputType="number" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tvCancel"
+                style="@style/buttonDesignOutline"
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:text="@string/text_cancel" />
+
+
+            <TextView
+                android:id="@+id/tvSubmit"
+                style="@style/buttonDesign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="2"
+                android:text="@string/text_submit" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

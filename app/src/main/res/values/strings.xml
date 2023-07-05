@@ -1,0 +1,211 @@
+<resources>
+
+
+    <string name="onesignal_app_id">"2b0ff74a-0d11-4ab5-a18e-a7345a6e482d"</string>
+    <string name="str_mock_location_enabled">"Fake Location Enabled"</string>
+    <string name="str_auto_time_not_enabled">"Automatic Time Not Enabled"</string>
+    <string name="str_permissions_required">"Permissions Required"</string>
+    <string name="str_permissions_explanation">"Please enable permissions in settings for app to work properly"</string>
+    <string name="str_mock_location_explanation">"Please disable mock location in settings for app to work properly"</string>
+    <string name="str_auto_time_explanation">"Please enable automatic time in settings for app to work properly"</string>
+    <string name="str_unsent">Unsent</string>
+
+
+    <!--  General Texts  -->
+
+    <string-array name="select">
+        <item>Select</item>
+    </string-array>
+
+    <string name="text_exit">Exit</string>
+    <string name="text_exit_message">Are you sure you want to exit application?</string>
+    <string name="text_ok">OK</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_add">Add</string>
+    <string name="text_no">No</string>
+    <string name="text_no_data_found">No Data Found</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="text_alert">Alert</string>
+    <string name="hint_cnic">xxxxx-xxxxxxx-x</string>
+    <string name="hint_password">*************</string>
+    <string name="hint_email">abc@gmail.com</string>
+    <string name="hint_general">Write here</string>
+    <string name="hint_select">Select</string>
+    <string name="text_already_account">Already have an account?</string>
+    <string name="text_login_here">Login here</string>
+    <string name="hint_phone_number">xxxx-xxxxxxx</string>
+    <string name="internet_connection_message">Check Internet Connection </string>
+    <string name="text_location_permission_detail">Your Location seems to be disabled. Please enable it for app to work properly. Do you want to enable it?</string>
+    <string name="text_dummy">Testing and quality assurance: Android developers write and execute unit tests to verify the correctness of their code and ensure proper functionality. They may also work closely with quality assurance (QA) </string>
+
+
+    <!--    Login Screen -->
+    <string name="text_sign_you_in">Let\'s Sign You In </string>
+    <string name="text_sign_in_message">Enter your username and password for sign. </string>
+    <string name="text_username">Username</string>
+    <string name="text_password">Password</string>
+    <string name="text_don_t_have_an_account_signup">Don’t have an account? </string>
+    <string name="text_signup">Signup</string>
+    <string name="text_signin">Sign In</string>
+    <string name="text_forget_password">Forgot Password</string>
+
+
+    <!-- Forgot Password Screen   -->
+    <string name="text_forgot_heading">Let\'s Get your account back! </string>
+    <string name="text_forgot_sub_heading">Enter your email to receive instructions for resetting your password. </string>
+    <string name="text_email">Email</string>
+    <string name="text_email_error">Enter valid email address</string>
+    <string name="text_reset_password">Reset Password</string>
+
+    <!--  SignUp Screen  -->
+    <string name="text_signup_heading">Become Restaurant Partner</string>
+    <string name="text_signup_sub_heading">Get a sales boast of upto 30% from takeaways</string>
+    <string name="text_submit">Submit</string>
+    <string name="text_submit_confirmation">Are you sure you want to submit ?</string>
+    <string name="text_update">Update</string>
+    <string name="text_store_name">Store Name</string>
+    <string name="text_store_adress">Store Address</string>
+    <string name="text_phone_number">Phone Number</string>
+    <string name="hint_mobile_number_pak">3xxxxxxxxx</string>
+    <string name="text_membership_program">Choose your membership program</string>
+    <string name="text_terms_and_condition">By click submit accept terms and condition</string>
+    <string name="text_membership">Membership</string>
+    <string name="text_commission">Commission</string>
+    <string name="text_store_name_error">Enter valid store name</string>
+    <string name="text_store_address_error">Enter valid store address</string>
+    <string name="text_phone_number_error">Enter valid phone number</string>
+    <string name="text_password_error">Enter valid password</string>
+    <string name="text_membership_program_error">Choose membership program</string>
+    <string name="text_terms_condition_error">Accept terms and conditions</string>
+
+
+    <!-- Dashboard   -->
+    <string name="text_navigation_home">Home</string>
+    <string name="text_navigation_order">Orders</string>
+    <string name="text_navigation_menu">Menu</string>
+    <string name="text_navigation_merchant">Merchant</string>
+    <string name="text_navigation_profile">Profile</string>
+
+
+    <!--  Home   -->
+    <string name="text_online_status">Online</string>
+    <string name="text_offline_status">Offline</string>
+    <string name="text_search">Search</string>
+    <string name="text_earnings">Earnings</string>
+    <string name="text_earnings_sub_heading">Your sales, cash in and referral earnings</string>
+    <string name="text_last_order">Last Order</string>
+    <string name="text_last_order_sub_heading">Quick management of the last 5 orders</string>
+    <string name="text_top_customer">Top Customer</string>
+    <string name="text_top_customer_detail">Your top customer consumer</string>
+    <string name="text_sales_overview">Sales Overview</string>
+    <string name="text_overview_of_review">Overview of Review</string>
+    <string name="text_overview_of_review_message">This month you get 0 Reviews</string>
+
+
+    <!--  Profile   -->
+    <string name="text_account_setting">Account Settings</string>
+    <string name="text_manage_profile">Manage Profile</string>
+    <string name="text_change_password">Change Password</string>
+    <string name="text_notification">Notification</string>
+    <string name="text_push_notification">Push Notification</string>
+    <string name="text_local_notification">Local Notification</string>
+    <string name="text_printer">Printer</string>
+    <string name="text_language">Language</string>
+    <string name="text_delete_account">Delete Account</string>
+    <string name="text_legal">Legal</string>
+    <string name="text_sign_out">Sign Out</string>
+    <string name="text_logout">Sign Out</string>
+    <string name="text_logout_description">Are you sure you want to sign out?</string>
+    <string name="text_edit_profile">Edit Profile</string>
+    <string name="text_old_password">Old Password</string>
+    <string name="text_new_password">New Password</string>
+    <string name="text_confirm_password">Confirm Password</string>
+    <string name="text_old_password_error">Enter valid old password</string>
+    <string name="text_new_password_error">Enter valid new password</string>
+    <string name="text_confirm_password_error">Enter valid confirm password</string>
+    <string name="text_password_not_match_error">Confirm password not match</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--    Merchant Screen     -->
+    <string name="text_request_payout">Request Payout</string>
+    <string name="text_payment_account">Payment Account</string>
+    <string name="text_set_default_payment_account">Set your default payout account</string>
+    <string name="text_paypal">Paypal</string>
+    <string name="text_amount">Amount</string>
+    <string name="text_information">Information</string>
+    <string name="text_change_logo">Change Logo</string>
+    <string name="text_published_merchant">Published Merchant</string>
+    <string name="text_restaurant_name">Restaurant Name</string>
+    <string name="text_restaurant_slug">Restaurant Slug</string>
+    <string name="text_contact_name">Contact Name</string>
+    <string name="text_contact_email">Contact Email</string>
+    <string name="text_contact_phone">Contact Phone</string>
+    <string name="text_about">About</string>
+    <string name="text_short_about">Short About</string>
+    <string name="text_cousine">Cousine</string>
+    <string name="text_tags">Tags</string>
+    <string name="text_services">Services</string>
+    <string name="text_featured">Featured</string>
+    <string name="text_distance_covered">Delivery Distance Covered</string>
+    <string name="text_distance_unit">Distance Unit</string>
+    <string name="text_address">Address</string>
+    <string name="text_website_address">Website Address</string>
+    <string name="text_radius_distance_covered">Radius Distance Covered</string>
+    <string name="text_settings">Settings</string>
+    <string name="text_settings_heading">This will appear on your receipt</string>
+    <string name="text_tax_number">Tax Number</string>
+    <string name="text_flavour_option">Flavour Option</string>
+    <string name="text_enable_tips">Enable Tips</string>
+    <string name="text_enable_voucher">Enable Voucher</string>
+    <string name="text_close_store">Close Store</string>
+    <string name="text_default_tip">Default Tip</string>
+    <string name="text_tip_type">Tip Type</string>
+    <string name="text_close">Close</string>
+    <string name="text_open_or_close">Open/Close</string>
+    <string name="text_open">Open</string>
+    <string name="text_store_hour">Store Hour</string>
+    <string name="text_add_store_hour">Add Store Hour</string>
+    <string name="text_manage_hour">Manage Hours</string>
+    <string name="text_edit">Edit</string>
+    <string name="text_from">From</string>
+    <string name="text_to">To</string>
+    <string name="text_custom_message">Custom Message</string>
+    <string name="text_account_number">Account Number</string>
+    <string name="text_routing_number">Routing Number</string>
+    <string name="text_account_name">Account Name</string>
+    <string name="text_account_holder_type">Account Holder Type</string>
+    <string name="text_currency">Currency</string>
+    <string name="text_country">Country</string>
+    <string name="text_bank_account_holder_name">Bank Account Holder Name</string>
+    <string name="text_bank_account_number">Bank Account Number/IBAN</string>
+    <string name="text_swift_code">Swift Code</string>
+    <string name="text_bank_name">Full Bank Name</string>
+    <string name="text_bank_branch_city">Bank Branch City</string>
+
+
+    <!--    Order Screen     -->
+    <string name="text_order_detail">Order Detail</string>
+    <string name="text_order_id">Order ID</string>
+    <string name="text_full_order_detail">View full order details</string>
+    <string name="text_summary">Summary</string>
+    <string name="text_delivery_info">Delivery Information</string>
+    <string name="text_payment_by_cash_on_delivery">Payment By Cash On Delivery</string>
+    <string name="text_time_line">TimeLine</string>
+    <string name="text_confirming_order">Confirming your order</string>
+    <string name="text_sub_total">Sub Total</string>
+    <string name="text_total">Total</string>
+    <string name="text_service_fee">Service Fee</string>
+    <string name="text_accepted">Accepted</string>
+    <string name="text_accept_order">Accept Order</string>
+    <string name="text_rejected">Rejected</string>
+    <string name="text_date_time">Date Time :</string>
+    <string name="text_no_item_found">No Items Found</string>
+    <string name="text_accept_order_detail">By accept order we will less the commission  total of $12 to your account.</string>
+    <string name="text_less_my_account">Less on my account</string>
+    <string name="text_select_reason">Select Reason</string>
+    <string name="text_reason">Reason</string>
+
+
+</resources>

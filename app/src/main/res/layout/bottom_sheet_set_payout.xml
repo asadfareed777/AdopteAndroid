@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/db_rounded_bottom_sheet_white"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp">
+
+    <View
+        style="@style/dividerLeftDrawable"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_5sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/_5sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5ssp"
+        android:layout_marginRight="@dimen/_5ssp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp">
+
+            <TextView
+                style="@style/orderHeadingDesign"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/_5ssp"
+                android:textSize="@dimen/_11ssp"
+                android:text="@string/text_set_default_payment_account" />
+
+
+            <ImageView
+                android:id="@+id/ivClose"
+                style="@style/imageForwardDesign"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_square_stoke"
+                android:src="@drawable/ic_baseline_close_24"
+                app:tint="@color/bg_dialog" />
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPayoutAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llPaypal"
+                style="@style/editTextBackgroundDesign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/etLabelDesign"
+                        android:text="@string/text_email" />
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        style="@style/editTextDesign"
+                        android:hint="@string/hint_general"
+                        android:inputType="textEmailAddress" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llStripe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_account_number" />
+
+                        <EditText
+                            android:id="@+id/etAccountNumber"
+                            style="@style/editTextDesign"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_account_name" />
+
+                        <EditText
+                            android:id="@+id/etAccountName"
+                            style="@style/editTextDesign"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_account_holder_type" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spAccountType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/select" />
+                        />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_currency" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spCurrency"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/select" />
+                        />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_routing_number" />
+
+                        <EditText
+                            android:id="@+id/etRoutingName"
+                            style="@style/editTextDesign"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_country" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spCountry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/select" />
+                        />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBankTransfer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_bank_account_holder_name" />
+
+                        <EditText
+                            android:id="@+id/etBankAccoutHolderName"
+                            style="@style/editTextDesign"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_bank_account_number" />
+
+                        <EditText
+                            android:id="@+id/etBankAccoutNumber"
+                            style="@style/editTextDesign"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_swift_code" />
+
+                        <EditText
+                            android:id="@+id/etSwiftCode"
+                            style="@style/editTextDesign"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_bank_name" />
+
+                        <EditText
+                            android:id="@+id/etBankName"
+                            style="@style/editTextDesign"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/editTextBackgroundDesign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/etLabelDesign"
+                            android:text="@string/text_bank_branch_city" />
+
+                        <EditText
+                            android:id="@+id/etBankBranchCity"
+                            style="@style/editTextDesign"
+                            android:hint="@string/hint_general" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSubmission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tvCancel"
+                style="@style/buttonDesignOutline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:text="@string/text_cancel" />
+
+
+            <TextView
+                android:id="@+id/tvSubmit"
+                style="@style/buttonDesign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:text="@string/text_submit" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

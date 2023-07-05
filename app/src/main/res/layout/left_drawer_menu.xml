@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <data>
+
+            <variable
+                name="model"
+                type="com.didaagency.adopteunelivraison.view.dashboard.MainViewModel" />
+        </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/db_bg_top_drawable_left"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingTop="@dimen/_30sdp"
+            android:paddingRight="@dimen/_25sdp"
+            android:paddingBottom="@dimen/_35sdp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_40sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_1ssp"
+                android:text="PWD"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_17ssp"
+                android:visibility="gone"  />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_db_profile"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/person_icon" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_toRightOf="@id/iv_db_profile"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_db_header_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_db_header_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="email"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"  />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:padding="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_right_drawable_Home"
+                    style="@style/textViewsLeftDrawable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:onClick="@{() -> model.onNotificationClick()}"
+                     />
+
+
+                <View style="@style/dividerLeftDrawable"/>
+
+                <TextView
+                    style="@style/textViewsLeftDrawable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sync Data"
+                    android:onClick="@{() -> model.onSyncDataClick()}"
+                    />
+
+
+
+                <View style="@style/dividerLeftDrawable"/>
+
+                <TextView
+                    style="@style/textViewsLeftDrawable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> model.onLogoutClick()}"
+                    android:text="Log Out" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom" >
+
+
+                    <TextView
+                        android:id="@+id/tvPoweredBy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/tvAppVersion"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:textColor="@color/appColor"
+                        android:textSize="@dimen/_8ssp" />
+
+                    <TextView
+                        android:id="@+id/tvAppVersion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/appColor"
+                        android:textSize="@dimen/_7ssp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvTabTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:text="Activities"
+        android:layout_margin="@dimen/_5sdp"
+        android:padding="@dimen/_5ssp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10ssp" />
+
+</layout>

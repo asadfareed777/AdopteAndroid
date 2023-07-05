@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/bg_store_hour_grey"
+        android:layout_margin="@dimen/_5sdp"
+        android:padding="@dimen/_10ssp"
+        android:gravity="center"
+        android:orientation="vertical"  >
+
+
+        <TextView
+            android:id="@+id/tvDay"
+            style="@style/storeHourLabelDesign"
+            android:text="Monday"/>
+        <TextView
+            android:id="@+id/tvTimings"
+            style="@style/storeHourLabelDesign"
+            android:text="12:00 am - 1:00 pm"/>
+        <TextView
+            android:id="@+id/tvStatus"
+            style="@style/tvRoundOrderStatus"
+            android:layout_margin="@dimen/_5ssp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/light_green"
+            android:text="Open" />
+
+    </LinearLayout>
+
+</layout>

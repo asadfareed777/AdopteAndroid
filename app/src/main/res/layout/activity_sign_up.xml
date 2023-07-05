@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.didaagency.adopteunelivraison.view.signUp.SignUpViewModel" />
+    </data>
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                style="@style/toolbarDesign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="@{() -> model.onBackClick()}"
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    style="@style/labelToolbarTitleDesign"
+                    android:text="@string/text_signup"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10ssp">
+
+
+                    <TextView
+                        android:layout_marginTop="@dimen/_60sdp"
+                        style="@style/loginBoldHeading"
+                        android:text="@string/text_signup_heading" />
+
+                    <TextView
+                        style="@style/subHeading"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:text="@string/text_signup_sub_heading" />
+
+                    <LinearLayout
+                        style="@style/editTextBackgroundDesign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/etLabelDesign"
+                                android:text="@string/text_store_name" />
+
+                            <EditText
+                                android:id="@+id/etStoreName"
+                                style="@style/editTextDesign"
+                                android:hint="@string/hint_general" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/editTextBackgroundDesign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/etLabelDesign"
+                                android:text="@string/text_store_adress" />
+
+                            <EditText
+                                android:id="@+id/etStoreAddress"
+                                style="@style/editTextDesign"
+                                android:hint="@string/hint_general" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/editTextBackgroundDesign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/etLabelDesign"
+                                android:text="@string/text_email" />
+
+                            <EditText
+                                android:id="@+id/etEmail"
+                                style="@style/editTextDesign"
+                                android:inputType="textEmailAddress"
+                                android:hint="@string/hint_general" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/editTextBackgroundDesign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/etLabelDesign"
+                                android:text="@string/text_phone_number" />
+
+                            <com.didaagency.adopteunelivraison.utils.widgets.CustomPhoneNumber
+                                android:id="@+id/etPhoneNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/hint_general" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        style="@style/editTextBackgroundDesign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/ivEye"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/etLabelDesign"
+                                android:text="@string/text_password" />
+
+                            <EditText
+                                android:id="@+id/etPassword"
+                                style="@style/editTextDesign"
+                                android:hint="@string/hint_password"
+                                android:inputType="textPassword" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/ivEye"
+                            style="@style/etIconDesign"
+                            android:layout_alignParentRight="true"
+                            android:onClick="@{() -> model.onEyePasswordClick()}"
+                            android:src="@drawable/ic_eye_hide" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_marginTop="@dimen/_10ssp"
+                        style="@style/subHeading"
+                        android:textColor="@color/label_color"
+                        android:text="@string/text_membership_program" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:buttonTint="@color/appColor"
+                            android:id="@+id/rbtnCommission"
+                            android:layout_weight="1"
+                            android:textColor="@color/label_color"
+                            android:text="@string/text_commission"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+                        <RadioButton
+                            android:id="@+id/rbtnMembership"
+                            android:buttonTint="@color/appColor"
+                            android:includeFontPadding="false"
+                            android:text="@string/text_membership"
+                            android:layout_width="0dp"
+                            android:textColor="@color/label_color"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"/>
+                    </RadioGroup>
+
+                    <CheckBox
+                        android:id="@+id/cbPrivacy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/label_color"
+                        android:buttonTint="@color/appColor"
+                        android:text="@string/text_terms_and_condition" />
+
+                    <TextView
+                        style="@style/buttonDesign"
+                        android:layout_marginBottom="@dimen/_40sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{() -> model.onSignUpClick()}"
+                        android:text="@string/text_submit" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</layout>
